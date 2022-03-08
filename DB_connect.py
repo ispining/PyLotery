@@ -19,13 +19,7 @@ def pre_DB():
     en TEXT
     )""")
     commit()
-    sql.execute(f"""CREATE TABLE IF NOT EXISTS media(
-    id TEXT,
-    media_type TEXT,
-    file_id TEXT,
-    file_name TEXT
-    )""")
-    commit()
+    
     sql.execute(f"""CREATE TABLE IF NOT EXISTS sub (
     user_id TEXT,
     sub_date TEXT,
@@ -43,45 +37,14 @@ def pre_DB():
     value TEXT
     )""")
     commit()
-    sql.execute(f"""CREATE TABLE IF NOT EXISTS user_docs (
-    user_id TEXT,
-    passport TEXT,
-    dl TEXT,
-    video TEXT
-    )""")
-    commit()
-    sql.execute(f"""CREATE TABLE IF NOT EXISTS seller (
-    user_id TEXT,
-    reg_type TEXT,
-    category TEXT,
-    status TEXT,
-    reg_date TEXT,
-    last_post TEXT
-    )""")
-    commit()
+    
+    
     sql.execute(f"""CREATE TABLE IF NOT EXISTS wallet(
     user_id TEXT,
     balance TEXT
     )""")
     commit()
-    sql.execute(f"""CREATE TABLE IF NOT EXISTS ads(
-    user_id TEXT,
-    media_type TEXT,
-    media_id TEXT,
-    caption TEXT,
-    switch TEXT
-    )""")
-    commit()
-    sql.execute(f"""CREATE TABLE IF NOT EXISTS pay_in(
-    id TEXT,
-    user_id TEXT,
-    coins TEXT,
-    dollar TEXT,
-    tranz TEXT,
-    status TEXT,
-    time TEXT
-    )""")
-    commit()
+    
 
 
 
